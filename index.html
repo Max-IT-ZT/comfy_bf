@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Comfy BF</title>
   </head>
@@ -13,7 +17,12 @@
     <button class="btn-on" onclick="showInfo('button1')">Смартфони</button>
     <button class="btn-on" onclick="showInfo('button2')">Ноутбуки</button>
     <button class="btn-on" onclick="showInfo('button3')">Телевізори</button>
-
+    <div class="logo" id="logo">
+      <span class="arrow animate__animated animate__fadeInUp animate__infinite"
+        >🔝</span
+      >
+      <h1 class="logo-text">Обери категорію!</h1>
+    </div>
     <div id="content">
       <section id="button1Content">
         <div class="container-smartphone-android">
@@ -186,7 +195,36 @@
           </ul>
         </div>
       </section>
-      <section id="button3Content"></section>
+      <section id="button3Content">
+        <div class="container-tv">
+          <h2 class="tv-title">Megogo</h2>
+          <ul class="tv-list">
+            <li class="tv-item"><span class="name">Megogo легка</span> 12/24міс <span class="sum">Ціна: 1188грн./3096грн.</span> 290 телеканалів. Більше 10 тисяч кінофільмів</li>
+            <li class="tv-item"><span class="name">Megogo Оптимальна</span> 12/24міс<span class="sum"> Ціна: 2388грн./4776грн.</span> 375 телеканалів. Більше 11 тисяч кінофільмів</li>
+            <li class="tv-item"><span class="name">Megogo Максимальна</span> 12/24міс <span class="sum">Ціна: 4428грн./8856грн.</span> 405 телеканалів. Більше 15 тисяч кінофільмів. <span class="sum">Ліга чемпіонів, Ліга Європи, Ліга конференцій, відбір на Євро-2024, національні чемпіонати, єдиноборства</span></li>
+          </ul>
+          </div>
+         <div class="container-tv">
+            <h2 class="tv-title">Swet TV</h2>
+            <ul class="tv-list">
+              <li class="tv-item"><span class="name">Swet TV M</span> 12/24міс <span class="sum">Ціна: 1188грн./2376грн.</span> 271 телеканалів. Більше 6 тисяч кінофільмів</li>
+              <li class="tv-item"><span class="name">Swet TV L</span> 12/24міс <span class="sum">Ціна: 2364грн./4728грн.</span> 290 телеканалів. Більше 12 тисяч кінофільмів</li>
+            </ul>
+         </div>
+          <div class="container-tv">
+            <h2 class="tv-title">Пакети налаштувань</h2>
+            <ul class="tv-list">
+              <li class="tv-item"><span class="name">All Inclusive</span>
+                <span class="sum">1799грн</span> Страхування Хеппі Сервіс на
+                <span class="sum">12міс.</span> <span class="sum">Swet TV M на 12міс</span> якщо не скористались повертається <span class="sum">500грн</span> (Бонусами). Безкоштовне налаштування
+              </li></li>
+              <li class="tv-item"><span class="name">Ultimate</span>
+                <span class="sum">3999грн.</span> Страхування Хеппі Сервіс на
+                <span class="sum">24міс.</span> <span class="sum">Swet TV M на 24міс</span> якщо не скористались повертається <span class="sum">800грн</span> (Бонусами). Безкоштовне налаштування</li>
+            </ul>
+          </div>
+        
+      </section>
     </div>
 
     <script>
@@ -195,10 +233,10 @@
         document.getElementById("button1Content").style.display = "none";
         document.getElementById("button2Content").style.display = "none";
         document.getElementById("button3Content").style.display = "none";
+        document.getElementById("logo").style.display = "none";
 
         // Отобразить нужный блок
         document.getElementById(buttonId + "Content").style.display = "block";
-
         // Отобразить общий контейнер
         document.getElementById("content").style.display = "block";
       }
