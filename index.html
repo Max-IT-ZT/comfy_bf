@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Ваш сайт</title>
+  </head>
+  <body>
+    <a href="https://comfy.ua/ua/zhytomyr/" class="logo-link"
+      ><img src="./img/logo_main.svg" alt="Comfy Logo" class="logo-img"
+    /></a>
+    <button class="btn-on" onclick="showInfo('button1')">Смартфони</button>
+    <button class="btn-on" onclick="showInfo('button2')">Ноутбуки</button>
+    <button class="btn-on" onclick="showInfo('button3')">Телевізори</button>
+
+    <div id="content">
+      <section id="button1Content">
+        <div class="container-smartphone-android">
+          <h2 class="smartphone-title">Смартфони 🤖</h2>
+          <ul class="smartphone-list">
+            <li class="smartphone-items">
+              <span class="name">Підписка на гаджет</span> Один рік
+              <span class="sum">10% від вартості техніки</span>. Два роки
+              <span class="sum">20% від вартості техніки</span> ремонт будь якої
+              поломки або гарантоване повернення
+              <span class="sum">80% від вартості товару</span> на момент купівлі
+              (Бонусами)
+            </li>
+            <li class="smartphone-items">
+              <span class="name">Максимальний захист</span>
+              <span class="sum">20% від вартості техніки</span> Ремонт будь якої
+              поломки, якщо техніку неможливо відремонтувати компенсація
+              <span class="sum"
+                >75% від вартості техніки, послуга діє 24 місяця</span
+              >
+              Якщо не скористався сервісом то вся сума повертаєтся (Бонусами)
+            </li>
+            <li class="smartphone-items">
+              <span class="name">All Inclusive</span>
+              <span class="sum">1499 грн.</span> безкоштовна заміна дисплею на
+              протязі року, безкоштовне налаштування пристрою і пожиттєва
+              підтримка від магазину, Блокувальник реклами Awax 12міс.
+            </li>
+            <li class="smartphone-items">
+              <span class="name">Ultimate</span>
+              <span class="sum">2999 грн.</span> Ремонт будь якої поломки,якщо
+              техніку неможливо відремонтувати то КЛ отримує компенсацію 75% від
+              вартості техніки,якщо не скористався 1500 бонусів повернення,
+              послуга діє 24 мiсяця, Блокувальник реклами Awax 12міс.
+            </li>
+          </ul>
+        </div>
+        <div class="container-smartphone-apple">
+          <h2 class="smartphone-title">Смартфони </h2>
+          <ul class="smartphone-list">
+            <li class="smartphone-items">
+              <span class="name">Максимальний захист</span>
+              <span class="sum">20% від вартості техніки</span> Ремонт будь якої
+              поломки, якщо техніку неможливо відремонтувати гарантована
+              компенсація
+              <span class="sum"
+                >75% від вартості техніки, послуга діє 24 місяця</span
+              >
+              Якщо не скористався сервісом то вся сума повертаєтся (Бонусами)
+            </li>
+            <li class="smartphone-items">
+              <span class="name">Підписка на гаджет</span> Один рік
+              <span class="sum">10% від вартості техніки</span>. Два роки
+              <span class="sum">20% від вартості техніки</span> ремонт будь якої
+              поломки або гарантоване повернення
+              <span class="sum">80% від вартості товару</span> на момент
+              купівлі(Бонусами)
+            </li>
+            <li class="smartphone-items">
+              <span class="name">All Inclusive</span>
+              <span class="sum">1999 грн.</span> безкоштовна заміна дисплею або
+              задньої кришки на протязі року компенсація
+              <span class="sum">500гнр.</span> (Бонусами), Sweet TV 12міс.
+            </li>
+            <li class="smartphone-items">
+              <span class="name">Ultimate</span>
+              <span class="sum">4999 грн.</span> Ремонт будь якої поломки,якщо
+              техніку неможливо відремонтувати гарантована компенсація
+              <span class="sum"
+                >75% від вартості техніки, послуга діє 24 місяця</span
+              >якщо не скористався повертається
+              <span class="sum">3000грн</span>. (Бонусами), Sweet TV 24міс.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="button2Content"></section>
+      <section id="button3Content"></section>
+    </div>
+
+    <script>
+      function showInfo(buttonId) {
+        // Скрыть все блоки с информацией
+        document.getElementById("button1Content").style.display = "none";
+        document.getElementById("button2Content").style.display = "none";
+        document.getElementById("button3Content").style.display = "none";
+
+        // Отобразить нужный блок
+        document.getElementById(buttonId + "Content").style.display = "block";
+
+        // Отобразить общий контейнер
+        document.getElementById("content").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
